@@ -57,6 +57,61 @@ $color-black: #000;
       color: $color-white;
       text-align: center;
     }
+
+    @media only screen and (max-width: 905px) {
+      &-lg {
+        font-size: 6rem;
+      }
+    
+      &-sm {
+        font-size: 1.6rem;
+      }
+    }
+
+    @media only screen and (max-width: 699px) {
+      &-lg {
+        font-size: 5rem;
+      }
+    
+      &-sm {
+        font-size: 1.3rem;
+      }
+    }
+
+    @media only screen and (max-width: 599px) {
+      &-lg {
+        font-size: 4.5rem;
+      }
+    }
+
+    @media only screen and (max-width: 450px) {
+      &-lg {
+        font-size: 3.5rem;
+      }
+      &-sm {
+        font-size: 1.1rem;
+      }
+    }
+
+    @media only screen and (min-width: 376px) and (max-width: 399px) {
+      &-lg {
+        font-size: 3.2rem;
+      }
+
+      &-sm {
+        font-size: 1.04rem;
+      }
+    }
+
+    @media only screen and (max-width: 375px) {
+      &-lg {
+        font-size: 2.5rem;
+      }
+
+      &-sm {
+        font-size: 1rem;
+      }
+    }
   }
 
   &__btn {
@@ -77,6 +132,30 @@ $color-black: #000;
       cursor: pointer;
     }
   }
+
+  //////////////MEDIA WUERIES//////////////
+  @media only screen and (max-width: 1300px) {
+    &__main {
+      height: 45vh;
+    }
+  }
+
+  @media only screen and (max-width: 905px) {
+    &__main {
+      height: 40vh;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    &__main {
+      height: 50vh;
+    }
+
+    &__btn {
+      width: 12rem;
+      height: 5rem;
+    }
+  }
 }
 ////////////////////ABOUT SECTION /////////////////////  
 .about {
@@ -85,13 +164,45 @@ $color-black: #000;
   justify-content: space-around;
   align-items: center;
   margin-top: 7rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
 
   &__card {
     background: $color-primary-1;
     padding: 1.3rem;
-    width: 20vw;
-    height: 15vh;
+    min-width: 20vw;
+    min-height: 15vh;
     color: $color-white;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.5rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+}
+
+///////////////////////// MEDIA QUERIES ///////////////////////////
+@media only screen and (max-width: 900px) {
+  .about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.3rem;
+
+    &__card {
+      font-size: 1.3rem;
+      line-height: 2rem;
+    }
+  }
+}
+@media only screen and (max-width: 450px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+
+    &__card {
+      width: 65vw;
+    }
   }
 }
